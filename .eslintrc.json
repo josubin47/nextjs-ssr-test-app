@@ -1,3 +1,28 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["tsconfig.json"],
+    "tsconfigRootDir": ".",
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "jsx": true,
+    "useJSXTextNode": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    //"prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "no-unused-vars": "off"
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier"
+  ]
 }
