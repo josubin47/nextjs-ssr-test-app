@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Box, Text, Flex, UnorderedList, ListItem } from '@chakra-ui/react';
+import { PATH } from '@/src/utils/constants';
 
 interface HeaderProps {
   currentPath: string;
@@ -23,11 +24,11 @@ export default function Header({ currentPath }: HeaderProps) {
           <UnorderedList display="flex" listStyleType="none" m={0} p={0}>
             <ListItem mr={4}>
               <Link
-                href="/about"
+                href={PATH.about}
                 style={{
                   textDecoration: 'none',
-                  color: currentPath === '/about' ? 'black' : 'gray',
-                  fontWeight: currentPath === '/about' ? 'bold' : '',
+                  color: currentPath === PATH.about ? 'black' : 'gray',
+                  fontWeight: currentPath === PATH.about ? 'bold' : '',
                 }}
               >
                 ABOUT
@@ -35,11 +36,11 @@ export default function Header({ currentPath }: HeaderProps) {
             </ListItem>
             <ListItem mr={4}>
               <Link
-                href="/"
+                href={PATH.store}
                 style={{
                   textDecoration: 'none',
-                  color: currentPath === '/' ? 'black' : 'gray',
-                  fontWeight: currentPath === '/' ? 'bold' : '',
+                  color: currentPath === PATH.store ? 'black' : 'gray',
+                  fontWeight: currentPath === PATH.store ? 'bold' : '',
                 }}
               >
                 STORE
