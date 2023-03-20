@@ -13,7 +13,7 @@ export default function Home({ storeList }: HomeProps) {
     <>
       <Head>
         <title>맛집 리스트</title>
-        <meta name="description" content="퍼플아이오 과제 테스트 홈" />
+        <meta name="description" content="nextjs-ssr-spa app home" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex as="article" margin={10}>
